@@ -1,6 +1,6 @@
 PARRY 1.0
 
-A small (28KB) and flexible drawing app, to take quick notes or doodle around.
+A small (28KB) and flexible drawing app to take quick notes or doodle around.
 
 The code is Free and Open Source Software (FOSS) under the Massachusetts Institute of Technology (MIT) license.
 
