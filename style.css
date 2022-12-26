@@ -1,0 +1,296 @@
+/* PARRY 1.0 */
+
+/* General */
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+body {
+  background-color: var(--global-1);
+  overflow: hidden;
+  cursor: crosshair;
+}
+body::selection {
+  background-color: var(--global-2);
+}
+body::-moz-selection {
+  background-color: var(--global-2);
+}
+
+/* Variables */
+
+:root {
+  --global-1: #fdb34c;
+  --global-2: transparent;
+  --global-3: rgba(255, 255, 255, 0.7);
+}
+
+[theme-variable="dark"] {
+  --global-1: #fdb34c;
+  --global-2: transparent;
+  --global-3: rgba(0, 0, 0, 0.7);
+}
+
+/* Grid */
+
+.index {
+  display: grid;
+
+  grid-template-columns: 0.7em 1fr 0.7em;
+  grid-template-rows: 0.7em 1fr 0.7em;
+
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Tools */
+
+#tools {
+  display: grid;
+
+  grid-template-columns: 28px;
+  grid-template-rows: repeat(6, 28px);
+
+  grid-row-gap: 0.7em;
+
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+
+  place-self: start;
+
+  z-index: 3;
+}
+
+/* Theme */
+
+#theme {
+  display: grid;
+
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+
+  place-self: center;
+
+  background-color: var(--global-2);
+  border: none;
+}
+#theme svg {
+  background-color: var(--global-2);
+  fill: var(--global-3);
+
+  width: 28px;
+  height: 28px;
+
+  transition: 0.4s ease;
+  place-self: center;
+  cursor: crosshair;
+}
+
+/* Logo */
+
+#logo {
+  display: grid;
+
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+
+  place-self: end;
+
+  background-color: var(--global-2);
+  border: none;
+
+  z-index: 3;
+}
+#logo svg {
+  background-color: none;
+  fill: var(--global-3);
+
+  width: 180px;
+  height: 52px;
+  
+  place-self: center;
+  transition: 0.4s ease;
+}
+
+/* Buttons */
+
+#increase {
+  display: grid;
+
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+
+  place-self: center;
+
+  background-color: var(--global-2);
+  border: none;
+}
+#increase svg {
+  background-color: var(--global-2);
+  fill: var(--global-3);
+
+  width: 28px;
+  height: 28px;
+
+  place-self: center;
+  transition: 0.4s ease;
+  
+  cursor: crosshair;
+}
+
+#decrease {
+  display: grid;
+
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+
+  place-self: center;
+
+  background-color: var(--global-2);
+  border: none;
+}
+
+#decrease svg {
+  background-color: var(--global-2);
+  fill: var(--global-3);
+
+  width: 28px;
+  height: 28px;
+
+  place-self: center;
+  transition: 0.4s ease;
+
+  cursor: crosshair;
+}
+
+#clear {
+  display: grid;
+
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+
+  place-self: center;
+
+  background-color: var(--global-2);
+  border: none;
+}
+#clear svg {
+  background-color: var(--global-2);
+  fill: var(--global-3);
+
+  width: 28px;
+  height: 28px;
+
+  place-self: center;
+  transition: 0.4s ease;
+
+  cursor: crosshair;
+}
+
+/* Colors */
+
+#colors {
+  background-color: var(--global-2);
+  border: none;
+
+  width: 28px;
+  height: 28px;
+
+  place-self: center;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  cursor: crosshair;
+}
+#colors::-webkit-color-swatch {
+  border-radius: 24px;
+  border: 3px solid var(--global-3);
+
+  transition: 0.4s ease;
+}
+#colors::-moz-color-swatch {
+  border-radius: 24px;
+  border: 3px solid var(--global-3);
+
+  transition: 0.4s ease;
+}
+
+/* Color */
+
+#color {
+  background-color: var(--global-2);
+  border: none;
+
+  width: 28px;
+  height: 28px;
+
+  justify-self: center;
+  align-self: center;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  cursor: crosshair;
+}
+#color::-webkit-color-swatch {
+  border-radius: 24px;
+  border: 3px solid var(--global-3);
+
+  transition: 0.4s ease;
+}
+#color::-moz-color-swatch {
+  border-radius: 24px;
+  border: 3px solid var(--global-3);
+
+  transition: 0.4s ease;
+}
+
+.color-input {
+  cursor: crosshair;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+  margin: 0;
+}
+
+/* Paint */
+
+#canvas {
+  display: grid;
+
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+
+  grid-column: 1 / 4;
+  grid-row: 1 / 4;
+
+  background-color: var(--global-2);
+  border: none;
+
+  overflow: hidden;
+}
+
+canvas {
+  background-color: var(--global-2);
+  border: none;
+  
+  overflow: hidden;
+  cursor: crosshair;
+  z-index: 2;
+}
+canvas::selection {
+  background: var(--global-2);
+}
+canvas::-moz-selection {
+  background: var(--global-2);
+}
