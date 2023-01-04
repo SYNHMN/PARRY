@@ -4,6 +4,8 @@ A small (28KB) and flexible drawing app to take quick notes or doodle around.
 
 The code is Free and Open Source Software (FOSS) under the Massachusetts Institute of Technology (MIT) license.
 
+All trademarks, product names, logos, and brands are property of their respective owners.
+
 
 
 ## License
