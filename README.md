@@ -1,4 +1,4 @@
-PARRY 1.0
+### PARRY 1.0
 
 A small (28KB) and flexible drawing app to take quick notes or doodle around.
 
